@@ -6,8 +6,12 @@ public class ReverseFactorial {
 	private static final PrintStream OUT = System.out;
 
 	public static void main(String[] args) {
-		System.out.println(ReverseFactorial.ReverseF(120));
-		System.out.println(ReverseFactorial.ReverseF(121));
+		OUT.println(ReverseFactorial.ReverseF(120));
+		OUT.println(ReverseFactorial.ReverseF(121));
+		OUT.println(ReverseFactorial.ReverseF(3628800));
+		
+		OUT.println(ReverseFactorial.Factorial(5));
+		OUT.println(ReverseFactorial.Factorial(10));
 	}
 
 	public static String ReverseF(int n) {
@@ -27,8 +31,9 @@ public class ReverseFactorial {
 		return answer.toString();
 	}
 	
-	public static String Factorial(int n) {
-		return "";
+	public static int Factorial(int n) {
+		if(n <= 1) return 1;
+		else return n * Factorial(n-1);
 	}
 
 }
